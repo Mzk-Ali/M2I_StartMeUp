@@ -1,0 +1,147 @@
+/* --- MOBILE FIRST (petits écrans) --- */
+nav {
+    display: flex;
+    z-index: 5;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.92);
+    font-family: 'Indie Flower', cursive;
+    position: fixed;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu links masqués par défaut */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    position: absolute;
+    top: 70px; /* hauteur nav */
+    left: 0;
+    width: 100%;
+    background-color: var(--bleu-clair);
+    padding: 0; /* on gère padding quand menu ouvert */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    gap: 0;
+    font-size: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 15px 20px;
+    color: black;
+    font-size: 24px;
+}
+
+.nav-links a.active {
+    color: var(--bleu-fonce);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+/* Burger visible sur mobile */
+#nav-burger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--bleu-fonce);
+}
+
+/* Quand menu actif : affiché */
+.nav-links.active {
+    align-items: center;
+    max-height: 500px;
+    padding: 100px 50px;
+    gap: 30px;
+    font-size: 32px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.92), var(--bleu-clair));
+}
+
+.rotate {
+    animation: rotate360 0.5s ease forwards;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- DESKTOP (grand écran) --- */
+@media screen and (min-width: 1024px) {
+    nav {
+        height: 110px;
+        font-size: 32px;
+        padding: 20px 50px;
+    }
+    /* Burger caché */
+    #nav-burger {
+        display: none;
+    }
+
+    /* Menu affiché horizontalement */
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        overflow: visible;
+        max-height: none !important;
+        gap: 20px;
+        width: auto;
+        background: none;
+        padding: 0 !important;
+    }
+
+    .nav-links a {
+        padding: 2px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nav-links a:not(.active):hover{
+        color: var(--bleu-fonce);
+    }
+
+    .nav-links a:not(.active):not(.contact)::after{
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        width: 0%;
+        height: 3px;
+        background-color: var(--bleu-clair);
+        transition: width 0.3s ease, left 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    .nav-links a:not(.active):not(.contact):hover::after {
+        width: 60%;
+    }
+
+    .nav-links a.contact {
+        background: linear-gradient(to left, var(--bleu-clair), var(--white));
+        background-size: 200% auto;
+        background-position: left center;
+        transition: background-position 0.3s ease-out;
+    }
+
+    .nav-links a.contact:hover{
+        background-position: right center;
+    }
+
+    .nav-links a.contact.active {
+        background: var(--bleu-clair);
+        border: 1px solid var(--bleu-fonce);
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,283 @@
+#section-titre {
+    padding: 40px 10px;
+}
+/*************** Section Tri *****************/
+#section-tri {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+#section-tri i {
+    font-size: 30px;
+}
+
+#section-tri .select-wrapper {
+    position: relative;
+    display: inline-block;
+    border: 2px solid var(--bleu-clair);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#section-tri select {
+    appearance: none;
+    padding: 10px 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+}
+
+#section-tri .select-wrapper:focus {
+    border-color: var(--bleu-fonce);
+}
+
+#section-tri .select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Pour que le clic passe au select */
+  color: var(--bleu-clair);
+  font-size: 20px;
+}
+
+#section-tri button {
+    display: flex;
+    flex-direction: row;
+    background-color: #F5F5F5;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#section-tri button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#section-tri button span {
+    display: none;
+}
+
+/*************** Section Pagination *****************/
+
+#section-pagination {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    font-size: 20px;
+    border-bottom: 1px solid var(--bleu-clair);
+}
+
+#section-pagination .pagination-numbers {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+#section-pagination .pagination-page.hidden {
+    display: none;
+}
+
+#section-pagination .pagination-page {
+  background: none;
+  color: var(--black);
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#section-pagination .pagination-page:hover {
+  background-color: #e0f0ff;
+}
+
+#section-pagination .pagination-page--active {
+  background-color: var(--bleu-clair);
+  color: var(--bleu-fonce);
+  cursor: default;
+}
+
+#section-pagination .pagination-ellipsis {
+  user-select: none;
+  color: var(--bleu-clair);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+#section-pagination button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#section-pagination span {
+    display: none;
+}
+
+/*************** Section Products *****************/
+
+#section-products {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+.card-product {
+    width: 300px;
+    height: 300px;
+    background-color: var(--bleu-clair-transparent-2);
+    border-radius: 30px;
+    border: 1px solid var(--bleu-clair);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-product .img-card {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+}
+
+.card-product .img-card img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-product:hover img{
+    transform: scale(1.1);
+}
+
+.card-product .description-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.card-product .description-card h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-product .description-card p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------------- DESKTOP (grand écran) ------------------ */
+/* --------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    main{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /*************** Section Tri *****************/
+
+    #section-tri i {
+        font-size: 30px;
+    }
+
+    #section-tri select {
+        font-size: 24px;
+    }
+
+    #section-tri button {
+        font-size: 24px;
+    }
+
+    
+    #section-tri button span {
+        display: block;
+    }
+
+    /*************** Section Pagination *****************/
+
+    #section-pagination {
+        font-size: 24px;
+    }
+
+    #section-pagination span {
+        display: block;
+    }
+
+    #section-pagination .pagination-page.hidden {
+        display: block;
+    }
+
+    #section-pagination button {
+        padding: 10px 20px;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #section-pagination button:hover{
+        color: var(--bleu-fonce);
+    }
+
+    #section-pagination button::after{
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        width: 0%;
+        height: 3px;
+        background-color: var(--bleu-clair);
+        transition: width 0.3s ease, left 0.3s ease;
+        transform: translateX(-50%);
+    }
+
+    #section-pagination button:hover::after {
+        width: 60%;
+    }
+
+    /*************** Section Products *****************/
+
+    #section-products {
+        justify-content: start;
+        padding: 40px 0px;
+    }
+
+    .card-product {
+        width: 400px;
+        height: 350px;
+    }
+
+    .card-product .img-card {
+        height: 60%;
+    }
+
+    .card-product .description-card h2 {
+        font-size: 24px;
+    }
+
+    .card-product .description-card p {
+        font-size: 16px;
+        font-style: italic;
+    }
+}

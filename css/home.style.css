@@ -1,0 +1,315 @@
+/*************** Section Présentation *****************/
+#section-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 100px 10px;
+}
+
+main h1,
+main h2 {
+    font-size: 20px;
+    color: var(--bleu-fonce);
+    font-weight: var(--regular);
+}
+
+.description-presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+}
+
+.description-presentation span {
+    font-size: 20px;
+    font-weight: var(--semi-bold);
+}
+
+.description-presentation p {
+    width: 100%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/*************** Section Nos Services *****************/
+
+#section-services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.titre-service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.titre-service span{
+    font-size: 24px;
+    font-weight: var(--semi-bold);
+}
+
+.titre-service p{
+    font-size: 16px;
+    font-style: italic;
+}
+
+.cards-service {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0px;
+}
+
+.card-service {
+    background-color: var(--bleu-clair-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    margin: 0px 30px;
+    height: 400px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-service i {
+    transition: color 0.4s ease, transform 0.4s ease;
+    font-size: 70px;
+    filter: drop-shadow(1px 1px 50px var(--bleu-fonce));
+}
+
+.card-service:hover i {
+    color: var(--bleu-fonce);
+    transform: scale(1.1);
+}
+
+.description-card-service {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.description-card-service h3 {
+    font-size: 24px;
+    font-weight: var(--semi-bold);
+}
+
+.description-card-service p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/*************** Section Nos Equipes *****************/
+
+#section-equipe {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.titre-equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.titre-equipe p{
+    font-size: 16px;
+    font-style: italic;
+}
+
+.cards-equipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 10px;
+}
+
+.card-equipe {
+    background-color: var(--gray);
+    width: 80%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 30px;
+    border-radius: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-equipe:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-equipe h3 {
+    font-size: 24px;
+    font-weight: var(--semi-bold);
+    color: var(--red);
+}
+
+.card-equipe p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/*************** Section Contact *****************/
+
+#section-contact {
+    background-color: var(--bleu-clair-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 20px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 50px 20px;
+}
+
+#section-contact p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#section-contact a {
+    background-color: var(--bleu-fonce);
+    padding: 12px 24px;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#section-contact a:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------------- DESKTOP (grand écran) ------------------ */
+/* --------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    main {
+        padding: 20px;
+    }
+
+    main h1,
+    main h2 {
+        font-size: 32px;
+    }
+
+    /*************** Section Présentation *****************/
+
+    #section-presentation {
+        flex-direction: row;
+        max-width: 1400px;
+        height: calc(100vh);
+        padding: 100px 10px;
+    }
+
+    .description-presentation {
+        width: 50%;
+    }
+
+    .description-presentation span {
+        font-size: 32px;
+    }
+
+    .description-presentation p {
+        font-size: 24px;
+    }
+
+    .img-presentation {
+        width: 50%;
+        display: block;
+    }
+
+    /*************** Section Nos Services *****************/
+
+    #section-services {
+        gap: 50px;
+    }
+
+    .titre-service span{
+        font-size: 40px;
+    }
+
+    .titre-service p{
+        font-size: 24px;
+    }
+
+    .cards-service {
+        flex-direction: row;
+        padding: 60px 0px;
+    }
+
+    .card-service {
+        padding: 50px;
+        margin: 0px;
+    }
+
+    /*************** Section Nos Equipes *****************/
+
+    .card-equipe{
+        width: 300px;
+    }
+
+    .titre-equipe p{
+        font-size: 24px;
+    }
+
+    .cards-equipe {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /*************** Section Contact *****************/
+
+    #section-contact {
+        padding: 50px 100px;
+        max-width: 900px;
+    }
+
+    #section-contact p {
+        font-size: 20px;
+    }
+
+    #section-contact a {
+        font-size: 32px;
+    }
+}

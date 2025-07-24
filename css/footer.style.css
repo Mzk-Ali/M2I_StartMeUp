@@ -1,0 +1,154 @@
+footer {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 20px;
+    gap: 10px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-navigation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 20px;
+    gap: 40px;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info a {
+    font-size: 36px;
+}
+
+.info p {
+    font-size: 24px;
+    text-align: center;
+}
+
+.info ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    font-size: 30px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.info ul li {
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.2s ease-out;
+}
+
+.info ul li:hover{
+    transform: scale(1.2);
+}
+
+.documents-copyright {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 30px 10px;
+    gap: 10px;
+    font-family: 'Indie Flower', cursive;
+    font-size: 16px;
+    text-align: center;
+}
+
+.documents-copyright p {
+    text-align: center;
+}
+
+.documents-copyright div {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    gap: 10px;
+    padding: 10px;
+}
+
+.documents-copyright a {
+    text-decoration: underline;
+    text-decoration-color: var(--bleu-clair);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: color 0.4s ease-out, text-decoration-color 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.documents-copyright a:hover {
+    color: var(--bleu-fonce);
+    text-decoration-color: var(--bleu-fonce);
+    transform: translateY(-2px);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navigation span {
+    color: var(--bleu-fonce);
+    font-weight: 200;
+    font-size: 28px;
+}
+
+.navigation ul {
+    font-size: 20px;
+    margin : 0px auto
+}
+
+/* --- DESKTOP (grand écran) --- */
+@media screen and (min-width: 1024px) {
+    footer {
+        padding: 0px 50px;
+    }
+    .info-navigation {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 100px;
+    }
+
+    .info {
+        width: 500px;
+    }
+
+    .navigation {
+        min-width: 400px;
+        padding: 50px 100px;
+    }
+
+    .navigation span {
+        font-size: 32px;
+    }
+
+    .navigation ul {
+        font-size: 24px;
+    }
+
+    .navigation ul li:hover {
+        color: var(--bleu-fonce);
+        text-underline-offset: 5px;
+    }
+
+    .documents-copyright {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: center;
+        font-size: 24px;
+    }
+
+    .documents-copyright div {
+        gap: 50px;
+    }
+}

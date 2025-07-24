@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="StartMeUp, trouvez tous nos produits pour des solutions numériques" />
+        <title>Nos produits</title>
+        <link rel="icon" href="img/favicon_io/android-chrome-512x512.png" type="image/png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Indie+Flower&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/nav.style.css">
+        <link rel="stylesheet" href="css/footer.style.css">
+        <link rel="stylesheet" href="css/products.style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <nav>
+            <div id="nav-logo">
+                <a href="index.html" class="logo">StartMeUp</a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="products.html">Nos Produits</a>
+                <a class="contact" href="contact.html">Contact</a>
+            </div>
+            <div id="nav-burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <main>
+            <section id="section-titre">
+                <h1>Découvrez nos produits</h1>
+            </section>
+            <section id="section-tri">
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                <div class="select-wrapper">
+                    <select id="select-filter">
+                        <option value="">Trier par <i class="fa-solid fa-caret-down"></i></option>
+                        <option value="date-asc">Plus récent</option>
+                        <option value="date-desc">Plus ancien</option>
+                        <option value="pertinence">Pertinence</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down select-icon"></i>
+                </div>
+                <button id="btn-filtre">Vider<span>&nbsp;le filtre</span></button>
+            </section>
+            <section id="section-pagination">
+                <button class="pagination-nav pagination-previous" disabled>
+                    <i class="fa-solid fa-angles-left"></i> <span>Précédent</span>
+                </button>
+                <div class="pagination-numbers">
+                    <button class="pagination-page">1</button>
+                    <span class="pagination-ellipsis">…</span>
+                    <button class="pagination-page">11</button>
+                    <button class="pagination-page pagination-page--active">12</button>
+                    <button class="pagination-page">13</button>
+                    <span class="pagination-ellipsis">…</span>
+                    <button class="pagination-page hidden">30</button>
+                    <!-- 1 ... 10  <strong> 11 </strong>  12 ... 30 -->
+                </div>
+                <button class="pagination-nav pagination-next">
+                    <span>Suivant</span><i class="fa-solid fa-angles-right"></i>
+                </button>
+            </section>
+            <section id="section-products">
+                <div class="card-product">
+                    <div class="img-card">
+                        <img src="img/ecommerce-1.jpg" alt="Image d'un site E-commerce en Version Mobile, Tablette et PC">
+                    </div>
+                    <div class="description-card">
+                        <h2>Site Web E-commerce</h2>
+                        <p>Pour votre E-commerce, StartMeUp vous propose un site web Ecommerce personnalisé</p>
+                    </div>
+                </div>
+                <div class="card-product">
+                    <div class="img-card">
+                        <img src="img/website.png" alt="Image de site Vitrine">
+                    </div>
+                    <div class="description-card">
+                        <h2>Site Vitrine</h2>
+                        <p>Pour l'image de votre entreprise, StartMeUp vous propose un site Vitrine personnalisé</p>
+                    </div>
+                </div>
+                <div class="card-product">
+                    <div class="img-card">
+                        <img src="img/application_mobile.jpg" alt="Image d'un Téléphone avec un représentation de plusieurs logo d'application mobile qui survole le téléphone">
+                    </div>
+                    <div class="description-card">
+                        <h2>Application mobile</h2>
+                        <p>StartMeUp vous accompagne pour la création d’une application mobile</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="info-navigation">
+                <div class="info">
+                    <a href="index.html" class="logo">StartMeUp</a>
+                    <p>Notre mission est de vous proposer les meilleurs produits numériques</p>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
+                        <li><i class="fa-brands fa-x-twitter"></i></li>
+                    </ul>
+                </div>
+                <div class="navigation">
+                    <span>Navigation</span>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Nos Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="documents-copyright">
+                <p>Copyright 2025 &copy; StartMeUp, ALL Rights Reserved</p>
+                <div>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">Termes et Conditions</a>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

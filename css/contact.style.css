@@ -1,0 +1,216 @@
+#section-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 40px 10px;
+}
+
+#section-title p {
+    font-weight: var(--semi-bold);
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px; 
+}
+
+#section-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#section-contact .iframe-and-detail-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+#section-contact iframe {
+    width: 100%;
+    height: 350px;
+}
+
+#section-contact .detail-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+#section-contact .detail-contact .detail-contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+#section-contact .detail-contact .detail-contact-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+#section-contact .detail-contact i {
+    color: var(--bleu-fonce);
+    font-size: 30px;
+}
+
+#section-contact .detail-contact span {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#section-contact form {
+    width: 100%;
+    background-color: var(--bleu-clair-transparent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+#section-contact form h2 {
+    font-size: 24px;
+    font-weight: var(--semi-bold);
+    color: var(--bleu-fonce);
+}
+
+#section-contact form div:not(.error-message) {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+#section-contact form label {
+    font-size: 16px;
+    font-style: italic;
+}
+
+#section-contact form input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid var(--bleu-clair);
+    padding: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#section-contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid var(--bleu-clair);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#section-contact form input:focus,
+#section-contact form textarea:focus {
+    border-color: var(--bleu-fonce);
+    box-shadow: 0 0 4px rgba(45, 137, 239, 0.4);
+}
+
+#section-contact form button {
+    background-color: var(--bleu-clair);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid var(--bleu-moyen);
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#section-contact form button:hover{
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.error-message {
+    color: var(--red);
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    font-style: italic;
+}
+.success-message {
+    display: none;
+    text-align: center;
+    color: #28a745;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------------- DESKTOP (grand écran) ------------------ */
+/* --------------------------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    #section-title p {
+        font-size: 24px;
+    }
+
+    #section-contact {
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+        gap: 30px;
+        padding: 0px 20px;
+    }
+
+    #section-contact iframe {
+        width: 100%;
+        height: 500px;
+    }
+
+    #section-contact .iframe-and-detail-contact {
+        width: 40%;
+    }
+
+    #section-contact .detail-contact span {
+        font-size: 24px;
+    }
+
+    #section-contact form {
+        width: 60%;
+        max-width: 800px;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    #section-contact form h2 {
+        font-size: 32px;
+    }
+
+    #section-contact form label {
+        font-size: 20px;
+    }
+
+    #section-contact form input {
+        height: 60px;
+        border-radius: 10px;
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    #section-contact form textarea {
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    #section-contact form button {
+        font-size: 24px;
+    }
+}

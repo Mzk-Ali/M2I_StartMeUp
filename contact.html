@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="StartMeUp, contacter nous pour plus de renseignements sur nos produits" />
+        <title>Contact</title>
+        <link rel="icon" href="img/favicon_io/android-chrome-512x512.png" type="image/png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Indie+Flower&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/nav.style.css">
+        <link rel="stylesheet" href="css/footer.style.css">
+        <link rel="stylesheet" href="css/contact.style.css">
+        <script src="js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <nav>
+            <div id="nav-logo">
+                <a href="index.html" class="logo">StartMeUp</a>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="products.html">Nos Produits</a>
+                <a class="contact" href="contact.html">Contact</a>
+            </div>
+            <div id="nav-burger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <main>
+            <section id="section-title">
+                <h1>Besoin de nous contacter ?</h1>
+                <p>N'Hésitez pas</p>
+            </section>
+            <section id="section-contact">
+                <div class="iframe-and-detail-contact">
+                    <iframe title="Map de l'entreprise StartMeUp" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2637.762010206329!2d7.705883076766997!3d48.61439861784564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796b7faf9ee309b%3A0x9e701574a35ae206!2s11%20Rue%20de%20la%20Haye%2C%2067300%20Schiltigheim!5e0!3m2!1sen!2sfr!4v1751553569163!5m2!1sen!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="detail-contact">
+                        <div class="detail-contact-item">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <div>
+                                <span>11 Rue de la Haye</span>
+                                <span>67300, Schiltigheim</span>
+                            </div>
+                        </div>
+                        <div class="detail-contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>03.90.20.66.00</span>
+                        </div>
+                    </div>
+                </div>
+                <form id="contactForm" novalidate>
+                    <h2>Formulaire de Contact</h2>
+                    <div>
+                        <div>
+                            <label for="lastname">Nom</label><br>
+                            <input type="text" id="lastname" name="lastname" placeholder="Dupont" ><br>
+                            <div class="error-message" id="error-lastname">Veuillez entrer votre nom.</div>
+                        </div>
+                        <div>
+                            <label for="firstname">Prenom</label><br>
+                            <input type="text" id="firstname" name="firstname" placeholder="Jean" ><br>
+                            <div class="error-message" id="error-firstname">Veuillez entrer votre prénom.</div>
+                        </div>
+                        <div>
+                            <label for="phone">Téléphone</label><br>
+                            <input type="tel" id="phone" name="phone" placeholder="01 00 11 22 11" ><br>
+                            <div class="error-message" id="error-phone">Veuillez entrer un numéro de téléphone valide.</div>
+                        </div>
+                        <div>
+                            <label for="description">Description</label><br>
+                            <textarea id="description" name="description" rows="5" placeholder="Entrez votre message" ></textarea>
+                            <div class="error-message" id="error-description">Veuillez entrer votre message.</div>
+                        </div>
+                    </div>
+                    <button type="submit">Envoyez</button>
+                    <div class="success-message" id="success-message">Merci, votre formulaire a été envoyé !</div>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <section class="info-navigation">
+                <div class="info">
+                    <a href="index.html" class="logo">StartMeUp</a>
+                    <p>Notre mission est de vous proposer les meilleurs produits numériques</p>
+                    <ul>
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-square-instagram"></i></li>
+                        <li><i class="fa-brands fa-x-twitter"></i></li>
+                    </ul>
+                </div>
+                <div class="navigation">
+                    <span>Navigation</span>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="products.html">Nos Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="documents-copyright">
+                <p>Copyright 2025 &copy; StartMeUp, ALL Rights Reserved</p>
+                <div>
+                    <a href="#">Politique de Confidentialité</a>
+                    <a href="#">Termes et Conditions</a>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>
